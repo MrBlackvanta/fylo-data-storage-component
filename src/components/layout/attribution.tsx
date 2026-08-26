@@ -1,7 +1,7 @@
 export default function Attribution() {
   return (
     <footer className="relative pb-0.5">
-      <p className="text-center text-xs text-muted">
+      <p className="text-center text-xs text-pale/70">
         Challenge by{" "}
         <a
           href="https://www.frontendmentor.io?ref=challenge"

@@ -2,10 +2,26 @@
 @source not "../../*.md";
 
 @theme {
-  --color-page: hsl(229, 57%, 11%);
-  --color-card: hsl(228, 56%, 26%);
-  --color-pale: hsl(243, 100%, 93%);
-  --color-muted: hsl(229, 7%, 55%);
+  --color-page: #0c122c;
+  --color-band: #0f1b3d;
+  --color-card: #1e2d69;
+  --color-pale: #dbd9ff;
+  --color-icon: #697ed4;
+  --color-label: #727685;
+  --color-meter-start: #ffa197;
+  --color-meter-end: #ff4a95;
+
+  --text-meta: 0.75rem;
+  --text-meta--line-height: 0.875rem;
+  --text-body: 0.875rem;
+  --text-body--line-height: 1rem;
+  --text-amount: 2.5rem;
+  --text-amount--line-height: 1;
+
+  --tracking-label: 0.0833em;
+
+  --radius-card: 10px;
+  --radius-notch: 100px;
 }
 
 @theme inline {
@@ -14,7 +30,7 @@
 
 @layer base {
   body {
-    @apply bg-page font-sans text-pale;
+    @apply bg-band font-sans text-pale;
   }
 
   a {
