@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@source not "../../*.md";
+
+@theme {
+  --color-page: hsl(229, 57%, 11%);
+  --color-card: hsl(228, 56%, 26%);
+  --color-pale: hsl(243, 100%, 93%);
+  --color-muted: hsl(229, 7%, 55%);
+}
+
+@theme inline {
+  --font-sans: var(--font-raleway);
+}
+
+@layer base {
+  body {
+    @apply bg-page font-sans text-pale;
+  }
+
+  a {
+    @apply v-focus-ring;
+  }
+}
+
+@utility v-focus-ring {
+  &:focus-visible {
+    @apply outline-2 outline-offset-4 outline-pale;
+  }
+}
