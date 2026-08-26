@@ -30,16 +30,46 @@
 
 @layer base {
   body {
-    @apply bg-band font-sans text-pale;
+    @apply font-sans text-pale;
+    background-color: var(--color-band);
+    background-image: url("../assets/bg-mobile.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @variant lg {
+      background-color: var(--color-page);
+      background-image: url("../assets/bg-desktop.webp");
+      background-position: bottom;
+      background-size: 100% auto;
+    }
   }
 
-  a {
+  a,
+  button {
     @apply v-focus-ring;
+  }
+
+  button:not(:disabled) {
+    @apply cursor-pointer;
   }
 }
 
 @utility v-focus-ring {
   &:focus-visible {
     @apply outline-2 outline-offset-4 outline-pale;
+  }
+}
+
+@utility v-callout-tail {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: calc(var(--spacing) * 5.75);
+    height: calc(var(--spacing) * 5.75);
+    background-color: var(--color-white);
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
   }
 }
