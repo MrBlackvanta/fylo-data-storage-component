@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Raleway } from "next/font/google";
 
+import { SITE_URL } from "@/app/site";
 import "./globals.css";
 
 const raleway = Raleway({
@@ -9,9 +10,6 @@ const raleway = Raleway({
   subsets: ["latin"],
   display: "swap",
 });
-
-const SITE_URL =
-  "https://fylo-data-storage-component.abdelrhman-ahmed8881.workers.dev";
 
 const name = "Fylo Data Storage";
 const title = `${name} | Storage usage at a glance`;
